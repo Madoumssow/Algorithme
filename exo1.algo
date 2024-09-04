@@ -1,0 +1,31 @@
+Algorithm ProcessPhrase
+    Input: A phrase ending with a period (.)
+    Output: Length of the phrase, Number of words, Number of vowels
+
+    Initialize:
+        lengthCounter ← 0
+        wordCounter ← 0
+        vowelCounter ← 0
+        currentCharacter ← ''  // Variable to hold the current character
+
+    Read the first character
+    While currentCharacter is not '.':
+        Increment lengthCounter by 1
+        If currentCharacter is a space:
+            Increment wordCounter by 1
+        Else if currentCharacter is one of 'a', 'e', 'i', 'o', 'u' (both lowercase and uppercase):
+            Increment vowelCounter by 1
+        Read the next character
+    
+    // At this point, currentCharacter is the period (.)
+    // Do not count the period in length or word count
+
+    // Handle the last word (if the phrase was not empty)
+    If lengthCounter > 0:
+        Increment wordCounter by 1
+    
+    // Output results
+    Output "Length of the phrase: ", lengthCounter
+    Output "Number of words: ", wordCounter
+    Output "Number of vowels: ", vowelCounter
+End Algorithm
